@@ -1,0 +1,303 @@
+/* Reset básico */
+body, h1, h2, h3, p, ul, li, a, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navegação */
+.navbar {
+    background: rgba(51, 51, 51, 0.9); /* Cinza escuro */
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espaçamento entre os links */
+}
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-links li a:hover {
+    color: #00BFFF; /* Azul */
+}
+
+/* Home */
+.home {
+    background: #f4f4f9; /* Cinza claro */
+    color: #333; /* Cinza escuro */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+}
+.home-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre texto e imagem */
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+.text h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.text h3 {
+    font-size: 2em;
+    color: #00BFFF; /* Azul para destacar o nome */
+    margin-bottom: 15px;
+}
+.text h3 span {
+    font-weight: 600;
+}
+.text p {
+    font-size: 1.2em;
+    color: #666; /* Cinza médio para o texto */
+    margin-bottom: 20px;
+}
+.btn-destaque {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background: #00BFFF; /* Azul */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+.btn-destaque:hover {
+    background: #009ACD; /* Azul mais escuro no hover */
+    transform: translateY(-3px);
+}
+.imagem-perfil img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+.imagem-perfil img:hover {
+    transform: scale(1.05);
+}
+
+/* Sobre Mim */
+.sobre {
+    background: #e0e0e0; /* Cinza médio */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Habilidades */
+.habilidades {
+    background: #f4f4f9; /* Cinza claro */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+.habilidades-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.habilidade-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100px; /* Largura fixa para cada item */
+}
+.habilidade-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.habilidade-logo {
+    width: 40px; /* Tamanho pequeno para as logos */
+    height: 40px;
+    margin-bottom: 10px;
+}
+.habilidade-item p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+/* Experiência */
+.experiencia {
+    background: #e0e0e0; /* Cinza médio */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Projetos */
+.projetos {
+    background: #f4f4f9; /* Cinza claro */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+.projetos .project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+.projetos .project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 250px; /* Largura menor para os cards */
+}
+.projetos .project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.projetos .project-card img {
+    width: 80px; /* Ícones menores */
+    height: 80px;
+    margin-bottom: 15px;
+}
+.projetos .project-card h3 {
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+.projetos .project-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+}
+.projetos .project-card a {
+    color: #00BFFF; /* Azul */
+    text-decoration: none;
+    background: rgba(0, 191, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+.projetos .project-card a:hover {
+    background: rgba(0, 191, 255, 0.2);
+}
+
+/* Contribuição em Segurança */
+.seguranca {
+    background: #e0e0e0; /* Cinza médio */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Contato */
+.contato {
+    background: #f4f4f9; /* Cinza claro */
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+.contato-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.contato form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+.contato input, .contato textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.contato button {
+    padding: 10px 20px;
+    background: #00BFFF; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.contato button:hover {
+    background: #009ACD; /* Azul mais escuro no hover */
+}
+.redes-sociais {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.redes-sociais a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.redes-sociais a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.redes-sociais img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .imagem-perfil img {
+        width: 150px;
+        height: 150px;
+    }
+    .projetos .project-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .redes-sociais {
+        flex-direction: column;
+        align-items: center;
+    }
+}
