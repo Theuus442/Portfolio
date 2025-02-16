@@ -10,6 +10,12 @@ document.querySelectorAll('.nav-links a').forEach(anchor => {
     });
 });
 
+function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}
+
+
 // Envio assíncrono do formulário de contato
 document.getElementById('form-contato').addEventListener('submit', function (e) {
     e.preventDefault(); // Impede o envio padrão do formulário
@@ -24,15 +30,15 @@ document.getElementById('form-contato').addEventListener('submit', function (e) 
             'Accept': 'application/json'
         }
     })
-    .then(response => {
-        if (response.ok) {
-            mensagemStatus.textContent = 'Mensagem enviada com sucesso!'; // Mensagem de sucesso
-            this.reset(); // Limpa o formulário
-        } else {
+        .then(response => {
+            if (response.ok) {
+                mensagemStatus.textContent = 'Mensagem enviada com sucesso!'; // Mensagem de sucesso
+                this.reset(); // Limpa o formulário
+            } else {
+                mensagemStatus.textContent = 'Erro ao enviar a mensagem. Tente novamente.'; // Mensagem de erro
+            }
+        })
+        .catch(error => {
             mensagemStatus.textContent = 'Erro ao enviar a mensagem. Tente novamente.'; // Mensagem de erro
-        }
-    })
-    .catch(error => {
-        mensagemStatus.textContent = 'Erro ao enviar a mensagem. Tente novamente.'; // Mensagem de erro
-    });
+        });
 });
